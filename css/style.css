@@ -9,6 +9,11 @@ body{
     z-index: 0;
 }
 .sol{
+    background-image: url(../images/sun.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    width: 200px;
+    height: 400px;
     position: absolute;
     left: 10px;
     top:10px;
