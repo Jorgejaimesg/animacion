@@ -1,21 +1,141 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-body{
+
+body {
+    background-image: url(../images/Dibujofondo.png);
+    background-color: #B3D28E;
+    overflow: hidden;
     background-size: cover;
     background-repeat: no-repeat;
-    position: relative;
-    z-index: 0;
+    
 }
-.sol{
-    background-image: url(../images/sun.png);
-    background-repeat: no-repeat;
-    background-size:contain;
-    width: 200px;
-    height: 400px;
+.anim{
+    position: relative;
+}
+.sol {
     position: absolute;
-    left: 10px;
-    top:10px;
+    right: 10px;
+    top: 10px;
     z-index: 1;
+}
+
+.solimg {
+    width: 200px;
+}
+
+.nubeimg {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    z-index: 5;
+    animation: nubemove 10s infinite;
+}
+
+.lluvia {
+    position: absolute;
+    right: 40%;
+    top: 150px;
+    z-index: 2;
+    width: 350px;
+    height: 1000em;
+    background-repeat: repeat-y;
+    animation: rainmove 10s infinite;
+}
+.flor {
+    position: absolute;
+    background-size: cover;
+    right: 40%;
+    top: 400px;
+    animation: flowermove 10s infinite;
+}
+.mensaje{
+    position: absolute;
+    right: 40%;
+    top:250px;
+    color:rgb(104, 4, 96);
+    font-weight: bold;
+    animation: msgmove 10s infinite;
+}
+
+@keyframes nubemove {
+    0% {
+        right: -50%;
+        opacity: 1;
+    }
+    25%{
+        right: 40%;
+        opacity: 1;
+    }
+    50% {
+        right: 40%;
+        opacity: 1;
+    }
+    75% {
+        right: 100%;
+        opacity: 1;
+    }
+    100% {
+        right: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes flowermove {
+    0% {
+        top: 500px;
+        opacity: 0;
+    }
+    50%{
+    }
+    65%{
+        top: 500px;
+        opacity: 0;
+    }
+    80% {
+        top: 400px;
+        opacity: 1;
+    }
+    100% {
+        top: 400px; /* Cambié 20% a 0% para mantener la flor en la parte inferior */
+        opacity: 1;
+    }
+}
+
+@keyframes rainmove {
+    0% {
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    30%{
+        background-position-y: 0px;
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 0;
+    }
+    80% {background-position-y: 300vh;
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes msgmove {
+    0%{
+        opacity: 0;
+    }
+    84%{
+        opacity: 0;
+    }
+    85% {
+        opacity: 1;
+    }
 }
